@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      /*
+        组件：
+          1.createClass创建组件的（es5）
+          2.组件的注意事项：
+            1.组件的首字母必须大写
+            2.组件中只能存在一个根元素
+          属性：
+            this.props:读取属性的
+            this.states:当前组件状态改变需要通过states去处理
+
+      */
+      var HelloMessage = React.createClass({
+        render:function(){
+          return <h1>hello {this.props.name}</h1>;
+        }
+      });
+
+      ReactDOM.render(
+        <HelloMessage name="john"/>,
+        document.getElementById('example')
+      );
+    </script>
+
+  </body>
+</html>

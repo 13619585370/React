@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>React</title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      var Hello  = React.createClass({
+        const isGoodWord = true
+        const goodWord=<strong>is good</strong>
+        const badWord = <strong>is not good</strong>;
+        render(){
+          <div>
+            <h1>
+              React 小书{isGoodWord?goodWord:badWord}
+            </h1>
+          </div>
+        }
+      });
+      ReactDOM.render(<Hello />,document.getElementById('root'));
+    </script>
+  </body>
+</html>

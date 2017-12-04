@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <style >
+      .nav li{
+        width: auto;
+        float: left;
+        align:center;
+        height: 50px;
+        padding:50px 50px;
+      }
+      .content{
+        padding:200px 50px;
+        width: auto;
+        height: 200px
+      }
+    </style>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+
+      var Header =React.createClass({
+        render:function(){
+          return(
+            <ul className="nav">
+              <li><a href="http://www.baidu.com">百度一下</a></li>
+              <li><a href="http://www.java1234.com">java1234</a></li>
+              <li><a href="http://www.react.com">React官网</a></li>
+              <li><a href="http://www.wangyi.com">网易</a></li>
+              <li><a href="http://www.aiqiyi.com">爱奇艺</a></li>
+            </ul>
+          )
+        }
+      });
+
+      var HttpComponent = React.createClass({
+        render:function(){
+          return(
+            <div className="content">
+              <input type="text" name="name"/><br/><br/>
+              <input type="password" name="password"/><br/><br/>
+              <input type="submit" value="提交"/><br/>
+            </div>
+          )
+        }
+
+      });
+
+      var Footer = React.createClass({
+        render:function(){
+          return(
+            <div>Copyright © 2012-2016 Java知识分享网 版权所有  联系站长：联系站长
+              备案号：苏ICP备13020813
+              苏公网安备 3206120200100</div>
+          )
+        }
+      });
+      ReactDOM.render(
+        <div>
+          <Header />
+          <HttpComponent />
+          <Footer />
+        </div>,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>

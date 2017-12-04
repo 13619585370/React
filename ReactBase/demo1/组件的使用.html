@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+  </head>
+  <style>
+    .pc{
+      color:green
+    }
+  </style>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      //组件的使用
+      //动态获取
+      var title="我们一起去玩";
+      var  styleobj = {
+        color:"blue",
+        fontSize:"70px"
+      }
+      var Hello = React.createClass({
+        //es5的写法
+        render:function(){
+          return (
+            /*
+              内联样式
+            */
+            //<div>{this.props.title},<div style={{color:"red"}}>我是一个好孩子</div></div>
+
+            <div>{this.props.title},<div style={styleobj}>我是一个好孩子</div><p className="pc">我喜欢</p></div>
+          )
+        }
+      });
+
+      ReactDOM.render(
+        <Hello title={title} />,
+        document.getElementById('example')
+      );
+    </script>
+
+  </body>
+</html>

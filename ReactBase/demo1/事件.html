@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+        var TextView = React.createClass({
+          //只要是用到状态属性，就必须初始化
+          getInitialState:function(){
+            return{
+              num:0
+            }
+          },
+          //定义事件
+          handlerClick:function(){
+            this.setState({
+              num:this.state.num+=1
+            })
+          },
+
+          render:function(){
+            return(
+              <div>
+                <button onClick={this.handlerClick}>点我</button>
+                <span>{this.state.num}</span>
+              </div>
+            )
+          }
+        });
+
+      ReactDOM.render(
+        <TextView />,
+        document.getElementById('example')
+      );
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+        var titles=123;
+        var TypeProps = React.createClass({
+          propTypes:{
+            title:React.PropTypes.string
+          },
+
+          getDefaultProps:function(){
+            return{
+              title:"未知"
+            }
+          },
+
+          render:function(){
+            return(
+                <div>我在验证：{this.props.title}</div>
+            )
+          }
+        });
+
+      ReactDOM.render(
+        <TypeProps title={titles}/>,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>

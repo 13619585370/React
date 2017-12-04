@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <style >
+      .div{
+        width: 100px;
+        height: :400px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+        /*
+          1.state:状态，当组件自身改变内容，可以用state来处理
+            1.1.this.state:获取
+            1.2.this.setState:设置
+
+          2.当state改变的时候，会触发render重新渲染
+            区分：props和state
+        */
+
+         var ComState = React.createClass({
+           //初始化State
+           getInitialState:function(){
+             return{
+               opacity:1.0
+             }
+           },
+
+           //渲染完成之后执行
+           componentWillMount:function(){
+             //制作一个计时器timer
+             var timer = setInterval(function(){
+               //获取opacity对象
+               var opacitys = this.state.opacity;
+               opacitys-=0.02;
+               //重新设置
+               this.setState({
+                 opacity:opacitys
+               })
+             }.bind(this),100)
+           },
+
+        //不必得有个render来渲染
+        render:function(){
+          return(
+            <div className="div" style={{opacity:this.state.opacity}}>Hello React</div>
+          )
+        }
+      });
+
+      ReactDOM.render(
+        <ComState />,
+        document.getElementById('example')
+      );
+    </script>
+
+  </body>
+</html>

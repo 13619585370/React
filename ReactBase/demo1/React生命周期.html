@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      /*
+        生命周期
+        start-->getDefaultProps-->getInitialState
+        componentWillMount:当组件即将渲染的时候触发的函数
+        componentDidMount:当组件渲染完成时候触发的函数
+        componentWillUpdate:当组件改变的时候触发的函数
+        componentDidUpdate:当组件改变完成的时候触发的函数
+        componentWillUnmount:组件被卸载的时候触发的函数
+
+        componentWillReceiveProps:Props改变的时候
+        shouldComponentUpdate:Props改变之后
+      */
+
+      //定义一个组件
+      var Hello = React.createClass({
+        getDefaultProps:function(){
+          console.log("getDefaultProps");
+        },
+
+        componentWillMount:function(){
+          console.log("componentWillMount");
+        },
+
+        componentDidMount:function(){
+          console.log("componentDidMount");
+        },
+
+        //不必得有个render来渲染
+        render:function(){
+          return(
+            <div>Hello React</div>
+          )
+        }
+      });
+
+      ReactDOM.render(
+        <Hello />,
+        document.getElementById('example')
+      );
+    </script>
+
+  </body>
+</html>

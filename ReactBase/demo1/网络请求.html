@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+
+      var HttpComponent = React.createClass({
+        //初始化一下两个变量
+        getInitialState:function(){
+          return{
+            imgUrl:"",
+            descText:""
+          }
+        },
+
+        ComponentWillMount:function(){
+          $.ajax({
+            type:"get",
+            url:"http://iwen.wiki/zhichenshop/buy.php",
+            dataType:"json",
+            success:function(data){
+              //进行设置
+              this.setState({
+                imgUrl:data[0].buyimg,
+                descText:data[0].buytitle
+              })
+            }.bind(this)
+          })
+        },
+
+        render:function(){
+          return(
+            <div>
+              <img src={this.state.imgUrl} />
+              <p>{this.state.descText}</p>
+            </div>
+          )
+        }
+
+      });
+
+      ReactDOM.render(
+        <HttpComponent />,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>
