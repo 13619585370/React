@@ -1,0 +1,37 @@
+.nav-container{
+  float: right;
+}
+.nav-container ul {
+  margin-top: 10px;
+}
+.nav-container ul li{
+  list-style: none;
+  float: left;
+  font-weight: 700;
+  line-height: 24px;
+  margin-left: 20px;
+  color: #666;
+  font-family:sans-serif;
+  font-size: 13px;
+  text-decoration: underline;
+  padding-right: 8px;
+
+}
+.nav-container ul li a{
+  color:#333;
+
+}
+.nav-container ul li a:hover{
+  color: blue;
+
+}
+.nav-container input{
+  padding-left: 10px;
+  text-align: center;
+  width: 80px;
+  height: 28px;
+  color: #fff;
+  font-size: 15px;
+  background: #3385ff;
+  border: 0px solid #b6b6b6;
+}

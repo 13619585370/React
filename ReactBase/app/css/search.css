@@ -1,0 +1,26 @@
+.search{
+  width: 100%;
+  text-align: center;
+}
+
+.search-logo img{
+  padding-left: 550px;
+  padding-top: 80px;
+  width:270px;
+  height: 129px;
+  display: block;
+}
+.search-input1{
+  border: 1px solid #b6b6b6;
+  height: 34px;
+  width: 539px;
+}
+.search-input2{
+  text-align: center;
+  width: 100px;
+  height: 36px;
+  color: #fff;
+  font-size: 15px;
+  background: #3385ff;
+  border: 0px solid #b6b6b6;
+}

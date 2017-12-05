@@ -1,0 +1,34 @@
+[
+  {
+    "name":"新闻",
+    "url":"http://news.baidu.com/"
+  },
+  {
+    "name":"hao123",
+    "url":"https://www.hao123.com/"
+  },
+  {
+    "name":"地图",
+    "url":"http://map.baidu.com/"
+  },
+  {
+    "name":"视频",
+    "url":"http://v.baidu.com/"
+  },
+  {
+    "name":"贴吧",
+    "url":"https://tieba.baidu.com/index.html"
+  },
+  {
+    "name":"学术",
+    "url":"http://xueshu.baidu.com/"
+  },
+  {
+    "name":"登录",
+    "url":"http://xueshu.baidu.com/"
+  },
+  {
+    "name":"设置",
+    "url":"http://xueshu.baidu.com/"
+  } 
+]
