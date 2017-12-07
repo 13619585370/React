@@ -1,0 +1,162 @@
+/*
+  header start
+*/
+.header-container{
+    margin-top: 10px;
+}
+.header-logo{
+  float: left;
+  height: 50px;
+  line-height: 50px;
+}
+
+.header-logo img{
+  height: 50px;
+}
+
+.header-menu{
+  margin-left: 20px;
+  float: left;
+  width: 100%;
+}
+.ant-menu-horizontal > .ant-menu-item.header-login{
+  float: right;
+}
+
+
+/*
+  header end
+*/
+
+
+/*
+  indexcontent.js start
+*/
+.index-container{
+    margin-top: 5px;
+}
+
+.ic-text{
+  float: left;
+}
+
+.ic-carousels{
+  float: right;
+}
+
+/*
+  indexcontent.js end
+*/
+
+
+/*
+  news_text_block  start
+*/
+
+.ntb-container{
+  font-size: 18px;
+  margin-left: 20px;
+  width: 100%;
+}
+
+.ntb-container ul li{
+  list-style: circle;
+  margin: 7px auto;
+}
+
+/*
+  news_text_block  end
+*/
+
+/*
+  news_textimg_block  start
+*/
+.ntib-container{
+  width: 100%;
+  margin-top: 20px;
+}
+
+.ntib-name{
+  border-left: 5px solid #ff0000;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  padding-left: 5px;
+}
+
+.ntib-container::after{
+  content: "";
+  clear: both;
+  overflow: hidden;
+  display: block;
+}
+
+.ntib-container div{
+  margin: 0 2px;
+  float: left;
+}
+
+.ntib-container div img{
+  width: 200px;
+}
+
+.ntib-container div p{
+  width:200px;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+/*
+  news_textimg_block  end
+*/
+/*
+  footer  start
+*/
+
+.footer{
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/*
+  newscontainer start
+*/
+
+.loadding{
+  position: absolute;
+  left: 50%;
+}
+
+.ant-back-top {
+  bottom: 100px;
+  right:20px;
+}
+.ant-back-top-inner {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 4px;
+  background-color: #57c5f7;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+}
+
+/*
+  backtop
+*/
+
+.all-backtop{
+  position: fixed;
+  right: 10px;
+  bottom:50px;
+  background-color: blue;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  display: none;
+  cursor: pointer;
+}
