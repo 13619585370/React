@@ -1,3 +1,4 @@
+
 module.exports = {
   entry:__dirname+"/app/js/index.js",
   output:{
